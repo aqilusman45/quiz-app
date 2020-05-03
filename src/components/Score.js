@@ -7,9 +7,13 @@ export const Score = ({ score, totalQuestions, questionNumber }) => {
     <div>
       <p>Score: {(score / totalQuestions) * 100}%</p>
       <p>
-        Max Score:{" "}
-        {Math.floor(((totalQuestions - questionNumber) / totalQuestions) * 100)}
-        %
+        {questionNumber === 1
+          ? "Max Score: 100%"
+          : `Max Score:
+          ${Math.floor(
+            ((totalQuestions - questionNumber) / totalQuestions) * 100
+          )}
+          %`}
       </p>
       <div className="score-bar">
         <div
