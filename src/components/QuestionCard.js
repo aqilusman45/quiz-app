@@ -34,7 +34,11 @@ export const QuestionCard = ({
         />
         <Status text={status} />
         <Controls handleNext={handleNext} />
-        <Score score={score} totalQuestions={totalQuestions} />
+        <Score
+          questionNumber={questionNumber}
+          score={score}
+          totalQuestions={totalQuestions}
+        />
       </div>
     </div>
   );

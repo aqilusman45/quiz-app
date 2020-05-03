@@ -1,11 +1,16 @@
 import React from "react";
 
-export const Score = ({ score, totalQuestions }) => {
+export const Score = ({ score, totalQuestions, questionNumber }) => {
   console.log(score, totalQuestions);
 
   return (
     <div>
-      <p>Score: {(score / totalQuestions) * 100} %</p>
+      <p>Score: {(score / totalQuestions) * 100}%</p>
+      <p>
+        Max Score:{" "}
+        {Math.floor(((totalQuestions - questionNumber) / totalQuestions) * 100)}
+        %
+      </p>
       <div className="score-bar">
         <div
           className="loading-indicator"
